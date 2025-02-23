@@ -1,6 +1,6 @@
 let somme = function() {
     let a = parseInt(prompt("Entrez un nombre entier :"));
-    let b, r;
+    let  r;
     let sum = 0; 
     do {
         r = a % 10; 
@@ -11,7 +11,7 @@ let somme = function() {
 
   
     alert(`La somme des chiffres est : ${sum}`);
+    document.getElementById('Mid').textContent = `La somme des chiffres est : ${sum}`;
 }
 
-
-somme();
+window.onload = somme;
