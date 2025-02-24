@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrousel d'Images</title>
+    <style>
+        #carousel {
+           
+            margin: auto;
+            position: relative;
+            overflow: hidden;
+            width: 100vw;
+            height: 100vh;
+        }
+        img {
+            width: 100%;
+            display: none;
+            height: 100%;
+            object-fit: cover;
+        }
+        img.active {
+            display: block;
+        }
+        .button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(255, 255, 255, 0.7);
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 1;
+        }
+        .prev {
+            left: 10px;
+        }
+        .next {
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="carousel">
+    <img src="1.jpeg" class="active" alt="Image 1">
+    <img src="2.jpeg" alt="Imag2">
+    <img src="3.jpeg" alt="Imag3">
+    <button class="button prev" onclick="prevImage()">Précédent</button>
+    <button class="button next" onclick="nextImage()">Suivant</button>
+</div>
+<script src="carrousel.js"></script>
+</body>
+</html>
