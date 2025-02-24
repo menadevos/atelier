@@ -4,24 +4,115 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculatrice</title>
+    <style>body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(to right, #ffcccb, #d4a5a5);
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    h1 {
+        font-size: 28px;
+        color: #fff;
+        background-color: rgba(0, 0, 0, 0.3);
+        padding: 10px 20px;
+        border-radius: 10px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    }
+    
+    .container {
+        background: rgba(255, 255, 255, 0.9);
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.2);
+        width: 300px;
+    }
+    
+    p {
+        font-size: 18px;
+        color: #333;
+        font-weight: bold;
+        margin-top: 15px;
+    }
+    
+    input[type="text"] {
+        width: 90%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 2px solid #ff9a9e;
+        border-radius: 5px;
+        font-size: 16px;
+        text-align: center;
+    }
+    
+    input[type="radio"] {
+        margin: 10px 5px;
+        transform: scale(1.2);
+    }
+    
+    label {
+        font-size: 20px;
+        color: #444;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    
+    button {
+        background: #7e3e43;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 18px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    
+    button:hover {
+        background: #b15762;
+    }
+    
+    #res {
+        margin-top: 20px;
+        font-size: 22px;
+        font-weight: bold;
+        color: #333;
+        background: rgba(255, 255, 255, 0.8);
+        padding: 10px;
+        border-radius: 5px;
+        display: inline-block;
+    }
+    </style>
 </head>
 <body>
     
     <center>
         <h1>  Calculator </h1>
+        <form   class ="container">
     <p>enter first value</p>
-    <input type="text" id="firstVal">
+    <input type="text" id="x">
     <p>enter second value</p>
-    <input type="text"  id="secondVal"><br>
+    <input type="text"  id="y"><br>
 
-    <input type =radio name="op" id="add">
+    <input type =radio name="op" value="+" id="add">
      <label>+</label>
-    <input type =radio name="op"id="sub">
+    <input type =radio name="op" value="-" id="sub">
     <label>-</label>
-    <input type =radio name="op"id="multip">
+    <input type =radio name="op"  value="*" id="multip">
     <label>*</label>
-    <input type =radio name="op"id="dev">
-    <label>/</label>
+    <input type =radio name="op" value="/" id="dev">
+    <label>/</label><br><br>
+ <button id="calc" > calculate</button><br>
+    <div id="res">
+    </div>
+</form>
+    <script src="arith.js"></script>
 </center>
 </body>
 </html>
